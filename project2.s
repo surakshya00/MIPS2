@@ -30,7 +30,7 @@ Char_found:
         sb $a0, 0($s6)
         
         
-        lb $a0, 0(a1)          #the second character gets stored on the second address
+        lb $a0, 0($a1)          #the second character gets stored on the second address
         sb $a0, 1($s6)
         
         lb $a0, 1($a1)                #similarly for 3rd and 4th character
