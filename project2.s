@@ -24,6 +24,10 @@ Char_found:
         beq $a0, 10, Non_char      #if the character is end of line then it branches to non char label again
         beq $t9, 1, display_error     #if the characters have already been found before then the input is invalid
         li $t9, 1                     #if the character passes through all above conditions then that means the character is valid and the first character to be found so lets put our condition as True that the char is found for the future context
+        la $s6, required               #loads the address of required(reserved for first 4 characters) into $s6
+        
+        lb $a0, 0($a1)                 #the first character gets stored on the first address of required 
+        sb $a0, 0($s6)
        
 Non_char:
         beq $t9, 0, display_error                 #checks the condition of character found or not and if not found then displays the error message
