@@ -31,4 +31,6 @@ Non_char:
  
  
 display_error:
+        la $a0, invalid_input                     #directs to invalid_input where we have the displaying error message
+        syscall
         
