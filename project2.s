@@ -25,4 +25,9 @@ Char_found:
         
  .globl main       
  Non_char:
+        beq $t9, 0, display_error                 #checks the condition of character found or not and if not found then displays the error message
+        
+ 
+ 
+ display_error:
         
