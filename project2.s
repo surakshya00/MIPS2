@@ -28,6 +28,9 @@ Char_found:
         
         lb $a0, 0($a1)                 #the first character gets stored on the first address of required 
         sb $a0, 0($s6)
+        
+        lb $a0, 1($a1)                 #the second character gets stores on the second address
+        sb $a0, 1($s6)
        
 Non_char:
         beq $t9, 0, display_error                 #checks the condition of character found or not and if not found then displays the error message
