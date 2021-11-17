@@ -14,4 +14,13 @@ main:
         la $a1, user_input          #loads the address of a1 to user_input to check all the values
         li $t9, 0                  #to make a condition of true or false to check if the character was found or not
 
+.globl main 
+
+Char_found:
+        lb $a0,($a1)       #loads the single byte into $a1
+        addi $a1, $a1, 1     #immediately increases the index by 1 after it is loaded
+        
+        beq $a0, 0, Non_char      #if the character is null then it branches to Non_char label
+        beq $a0, 10, Non_char      #if the character is spaace cause the ascii val of space is 10, then it branches to Non_char
+        
         
