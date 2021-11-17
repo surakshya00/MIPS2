@@ -5,5 +5,9 @@
 .text
 
 main:
+        li $v0, 8
+        la $a0, user_input
+        li $a1, 1001
+        syscall
 
         
