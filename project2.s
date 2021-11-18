@@ -56,6 +56,9 @@ Non_char:
 .globl main
 Char_loop:
         beq, $t5, 4, display_sum              #if the loop count is 4 then it directly ends the loop and goes to the branch display_sum
+        addi, $t5, $t5, 1                      #increase loop by 1
+        addi, $s6, $s6, -1                      #decreasing the address of the characters by 1 cause if we remember we started the loop from the last character
+        
  
  
 display_error:
