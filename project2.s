@@ -71,8 +71,8 @@ display_error:
 display_sum:
         add $a0, $zero, $s5                         #print the sum stored in s5
         syscall
-        j end
+        j end_code
 
-end:
+end_code:
         syscall
         
