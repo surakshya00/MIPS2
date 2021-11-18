@@ -50,9 +50,12 @@ Non_char:
         
         li $s5, 0                                  #initialising s5 to hold our sum while looping through characters
         li $t4, 1                                #to hold the exponential value of my base n number i.e. 36
-        li $t5, 0                                 #keeps track of loop 
-        
-        
+        li $t5, 0                                 #keeps track of loop
+        la $s6, required+4                      #it starts the loop from the last character of
+
+.globl main
+Char_loop:
+        beq, $t5, 4, display_sum              #if the loop count is 4 then it directly ends the loop and goes to the branch display_sum
  
  
 display_error:
