@@ -60,6 +60,8 @@ Char_loop:
         addi, $s6, $s6, -1                      #decreasing the address of the characters by 1 cause if we remember we started the loop from the last character
         lb $t0, ($s6)                          #the address of the last byte 
         
+        
+        
  
  
 .globl main 
