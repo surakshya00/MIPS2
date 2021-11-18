@@ -21,6 +21,7 @@ Char_found:
         
         beq $a0, 0, Non_char      #if the character is null then it branches to Non_char label
         beq $a0, 32, Char_found      #if the character is space cause the ascii val of space is 32, then it keeps on looping
+        beq $a0, 9, Char_found       #if the character is tab, then it keeps on looping
         beq $a0, 10, Non_char      #if the character is end of line then it branches to non char label again
         beq $t9, 1, display_error     #if the characters have already been found before then the input is invalid
         li $t9, 1                     #if the character passes through all above conditions then that means the character is valid and the first character to be found so lets put our condition as True that the char is found for the future context
