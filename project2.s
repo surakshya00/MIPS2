@@ -63,6 +63,10 @@ Char_loop:
  
  
 display_error:
+        li $v0, 4
         la $a0, invalid_input                     #directs to invalid_input where we have the displaying error message
+        syscall
+
+end:
         syscall
         
