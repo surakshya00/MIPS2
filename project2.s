@@ -62,10 +62,16 @@ Char_loop:
         
  
  
+.globl main 
 display_error:
         li $v0, 4
         la $a0, invalid_input                     #directs to invalid_input where we have the displaying error message
         syscall
+
+display_sum:
+        add $a0, $zero, $s5                         #print the sum stored in s5
+        syscall
+        j end
 
 end:
         syscall
