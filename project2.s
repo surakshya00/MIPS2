@@ -69,10 +69,12 @@ display_error:
         syscall
 
 display_sum:
+        li $v0, 1
         add $a0, $zero, $s5                         #print the sum stored in s5
         syscall
         j end_code
 
 end_code:
+        li $v0, 10                                #ends 
         syscall
         
