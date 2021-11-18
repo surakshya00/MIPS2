@@ -38,6 +38,11 @@ Char_found:
         
         lb $a0, 2($a1)
         sb $a0, 3($s6)
+        
+        addi, $a1, $a1, 3          #added 3 to the index increase because 4 characters have already been read
+        j Char_found
+        
+.globl main        
 Non_char:
         beq $t9, 0, display_error                 #checks the condition of character found or not and if not found then displays the error message
         
