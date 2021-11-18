@@ -41,10 +41,16 @@ Char_found:
         
         addi, $a1, $a1, 3          #added 3 to the index increase because 4 characters have already been read
         j Char_found
+
         
 .globl main        
 Non_char:
         beq $t9, 0, display_error                 #checks the condition of character found or not and if not found then displays the error message
+        
+        li $s5, 0                                  #initialising s5 to hold our sum while looping through characters
+        li $t4, 1                                #to hold the exponential value of my base n number i.e. 36
+        li $t5, 0                                 #keeps track of loop 
+        
         
  
  
